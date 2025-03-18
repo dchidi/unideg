@@ -1,0 +1,221 @@
+/* ========== DEFAULT STYLES ========== */
+.footer {
+  background-color: #111828;
+  color: #9ca3af;
+}
+.footerTitle {
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+.socialIcons a {
+  background-color: #353c47;
+  color: #ffffff;
+  width: 35px;
+  aspect-ratio: 1;
+  place-content: center;
+  text-align: center;
+  border-radius: 100px;
+  padding-top: 0.3rem;
+}
+.socialIcons a:hover {
+  background-color: #2b5395;
+}
+ul.footerQuickLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.contactIcons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+.contactIcons svg {
+  color: #9fbefd;
+}
+.footerBottom {
+  border-top: solid 1px #2a303b;
+  width: 100%;
+  padding: 1rem 0;
+}
+.footerBottomAlignRight {
+  margin-left: auto;
+  display: flex;
+  gap: 2rem;
+}
+.footerFindASchoolBtn {
+  display: flex;
+  place-content: center;
+  align-items: center;
+}
+.bigBtn {
+  width: 200px;
+  height: 60px;
+}
+
+/* ========== SMALL AND MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (max-width: 767px) {
+  .footer {
+    padding: 1rem;
+    font-size: 0.79rem;
+    text-align: center;
+  }
+  .socialIcons {
+    flex-direction: row !important;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 1rem;
+    font-size: 0.7rem;
+  }
+  .socialIcons a {
+    width: 25px;
+  }
+
+  .footerTitle {
+    margin-top: 2rem;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .contactIcons {
+    gap: 5px;
+    margin-bottom: 0.8rem;
+  }
+
+  .contactIcons.location {
+    align-items: flex-start;
+  }
+  .contactIcons.location svg {
+    font-size: 1rem;
+  }
+  .contactIcons svg {
+    font-size: 0.8rem;
+  }
+  .footerFindASchoolBtn {
+    margin: 2rem 0;
+  }
+  .copyright {
+    order: 2;
+    font-size: 0.6rem;
+  }
+  .footerBottomAlignRight {
+    order: 1;
+    margin-left: 0;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1599px) {
+  .footer {
+    padding: 2rem;
+    font-size: 0.8rem;
+  }
+  .footerTop > :nth-child(3) {
+    flex: 1.5;
+    margin-right: 0.1rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .footerTop > :nth-child(1) {
+    flex: 1.5;
+    margin-right: 2.5rem;
+  }
+  .footerItem {
+    flex: 1;
+  }
+  .socialIcons {
+    gap: 15px;
+    margin-top: 1rem;
+  }
+  .socialIcons a {
+    width: 30px;
+  }
+  .footerTitle {
+    margin-top: 2rem;
+  }
+
+  .contactInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .contactIcons {
+    gap: 5px;
+    margin-bottom: 0.8rem;
+  }
+
+  .contactIcons.location {
+    align-items: flex-start;
+  }
+  .contactIcons.location svg {
+    font-size: 35px;
+  }
+  .contactIcons svg {
+    font-size: 18px;
+  }
+  .footerBottom {
+    margin-top: 2rem;
+  }
+}
+
+/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
+@media only screen and (min-width: 1599px) and (max-width: 1999px) {
+  .footer {
+    padding: 6rem 10%;
+    font-size: 0.9rem;
+  }
+  .footerTop > :nth-child(1) {
+    flex: 1.5;
+    margin-right: 4rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .footer {
+    padding: 6rem 15%;
+    font-size: 0.9rem;
+  }
+  .footerTop > :nth-child(1) {
+    flex: 1.5;
+    margin-right: 4rem;
+  }
+}
+
+/* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
+@media only screen and (max-width: 575px) {
+}
+
+/* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footerItem p {
+    padding: 0 20%;
+  }
+}
+
+/* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+}
+
+/* ========== LANDSCAPE MODE (for all devices) ========== */
+@media only screen and (orientation: landscape) {
+}
+
+/* ========== DARK MODE SUPPORT ========== */
+@media (prefers-color-scheme: dark) {
+}
