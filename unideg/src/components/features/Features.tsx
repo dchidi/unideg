@@ -2,14 +2,16 @@ import React from "react";
 import Accordion from "../ui/Accordion";
 import { FeaturesList } from "../../config/constants";
 import YoutubeVideoPlayer from "../ui/YoutubeVideoPlayer";
+import { Column, Row } from "../layouts/row_column/RowColumn";
+import styles from "./Features.module.css";
 
 interface FeaturesProps {
   className?: string;
 }
 const Features: React.FC<FeaturesProps> = ({ className }) => {
   return (
-    <div className={`${className}`}>
-      <div>
+    <Row className={`${className}`}>
+      <Column className={styles.accordion}>
         {FeaturesList.map((feature, index) => (
           <Accordion
             isOpen={true}
@@ -18,9 +20,9 @@ const Features: React.FC<FeaturesProps> = ({ className }) => {
             key={index}
           />
         ))}
-      </div>
-      <YoutubeVideoPlayer />
-    </div>
+      </Column>
+      <YoutubeVideoPlayer className={styles.video} />
+    </Row>
   );
 };
 
