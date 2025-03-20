@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* ========== 1. Box Sizing and Scroll Behavior ========== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+/* ========== 2. Remove Default List Styles ========== */
+ul,
+ol {
+  list-style: none;
+}
+
+/* ========== 3. Remove Default Anchor Styles ========== */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ========== 4. Improve Button & Input Appearance ========== */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+/* Ensure buttons are clickable */
+button {
+  cursor: pointer;
+}
+
+/* ========== 5. Remove Tap Highlight on Mobile ========== */
+a,
+button,
+input,
+textarea {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* ========== 6. Normalize Image and Media Elements ========== */
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ========== 7. Set Root Font for Better Readability ========== */
+html {
+  font-size: 16px; /* Default 1rem = 16px */
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+
+/* ========== 8. Prevent Scroll Jumping When Overflow Hidden ========== */
+body {
+  overflow-x: hidden;
+  min-height: 100vh;
+  background-color: #fff;
+  color: #333;
+  font-family: "Noto Sans", sans-serif;
+}
+
+/* ========== 9. Improve Focus Styles for Accessibility ========== */
+:focus-visible {
+  outline: 2px solid #3498db; /* Custom focus color */
+  outline-offset: 3px;
+}
+
+/* ========== 10. Responsive Typography ========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+/* ========== 11. Remove Default Table Styles ========== */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* ========== 12. Utility Classes for Hidden Elements ========== */
+.hidden {
+  display: none !important;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+}
+
+:root {
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+  --font-size-large: 18px;
+}
+
+body {
+  font-size: var(--font-size-medium);
+}
+
+/* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
+@media only screen and (max-width: 575px) {
+  body {
+    font-size: var(--font-size-small);
+  }
+  h3 {
+    font-size: 1.08rem;
+  }
+}
+
+/* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  body {
+    font-size: var(--font-size-small);
+  }
+  h3 {
+    font-size: 1.08rem;
+  }
+}
+
+/* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  body {
+    font-size: var(--font-size-medium);
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+}
+
+/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
+@media only screen and (min-width: 1599px) and (max-width: 1999px) {
+}
+
+@media only screen and (min-width: 2000px) {
+}
+
+/* ========== LANDSCAPE MODE (for all devices) ========== */
+@media only screen and (orientation: landscape) {
+}
+
+/* ========== DARK MODE SUPPORT ========== */
+@media (prefers-color-scheme: dark) {
+}
