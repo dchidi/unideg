@@ -1,0 +1,118 @@
+.root {
+  position: fixed;
+  align-items: center;
+  top: 0;
+  left: 0;
+  padding: 1rem 2rem;
+  width: 100%;
+  z-index: 100;
+  background-color: rgba(240, 248, 255, 0.529);
+  transition: background-color 0.3s ease;
+}
+
+.logo {
+  margin-right: 4rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.actions {
+  margin-left: auto;
+}
+.showOnMobile,
+.mobileMenu {
+  display: none;
+}
+.navBtn,
+.navBtnClose {
+  padding: 5px 8px 2px 8px;
+  background-color: rgba(40, 62, 104, 0.907);
+}
+.mobileMenu {
+  position: fixed;
+  z-index: 200;
+  background-color: rgba(40, 62, 104, 0.986);
+  transition: background-color 0.3s ease;
+}
+
+.navBtnClose {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(27, 44, 75, 0.986);
+}
+.mobileMenuList {
+  padding-top: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: rgb(209, 231, 250);
+  font-size: 1.1rem;
+}
+ul.mobileMenuList li {
+  padding-bottom: 2rem;
+}
+/* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
+@media only screen and (max-width: 575px) {
+  .root,
+  .actions {
+    flex-direction: row;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+
+  .showOnMobile,
+  .mobileMenu {
+    display: inline-block;
+  }
+}
+
+/* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .root,
+  .actions {
+    flex-direction: row;
+  }
+  .hideOnMobile {
+    display: none;
+  }
+  .showOnMobile,
+  .mobileMenu {
+    display: inline-block;
+  }
+}
+
+/* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+}
+
+/* ========== LANDSCAPE MODE (for all devices) ========== */
+@media only screen and (orientation: landscape) {
+}
+
+/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
+@media only screen and (min-width: 1599px) and (max-width: 1999px) {
+  .root {
+    padding: 1rem 10%;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .root {
+    padding: 1rem 15%;
+  }
+}
+/* ========== DARK MODE SUPPORT ========== */
+@media (prefers-color-scheme: dark) {
+}

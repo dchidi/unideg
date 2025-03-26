@@ -3,15 +3,25 @@
   justify-content: center;
   margin: 3rem 0;
 }
+.title {
+  font-size: 1.8rem;
+  color: #444;
+  text-align: center;
+  padding-top: 2rem;
+}
 .testimonials {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   padding: 2rem;
   width: min(500px, 100vw);
   border-radius: 6px;
+  background-image: url(1.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .userReview {
   justify-content: center;
   align-items: center;
+  height: 15vh;
 }
 .item {
   flex: 1;
@@ -84,10 +94,17 @@
     padding: 1rem;
     border-radius: 0;
     width: 100vw;
+    background-image: unset;
   }
   .navigator {
     justify-content: center;
     align-items: center;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .userReview {
+    height: 25vh;
   }
 }
 
@@ -97,9 +114,18 @@
     flex-direction: row;
     justify-content: center;
   }
+  .testimonials {
+    background-position: top;
+  }
   .navigator {
     justify-content: center;
     align-items: center;
+  }
+  .title {
+    font-size: 1.5rem;
+  }
+  .userReview {
+    height: 25vh;
   }
 }
 

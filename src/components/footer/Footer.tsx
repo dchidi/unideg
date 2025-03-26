@@ -61,7 +61,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         </div>
         <div className={`${styles.footerFindASchoolBtn}  ${styles.footerItem}`}>
           <Button
-            label="Click to find a school"
+            label="Apply Now"
             onClick={findSchoolHandler}
             color="primary"
             iconRight={<FaLongArrowAltRight />}

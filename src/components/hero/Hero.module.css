@@ -1,97 +1,67 @@
 /* ========== DEFAULT STYLES ========== */
 .root {
-  background-color: #3156ae;
-}
-.video {
-  width: 50rem;
-  border-radius: 8px;
+  min-height: 80vh;
+  background-image: url("/medical_student_2.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  place-content: center;
+  padding-left: 2rem;
 }
 .title {
-  font-size: 1.8rem;
-  color: #c2d4ff;
-  text-align: center;
-  background-color: #3156ae;
-  padding-top: 2rem;
+  font-size: 3rem;
 }
-.accordion,
-.video {
-  flex: 1;
+.description {
+  width: min(30rem, 90%);
 }
-
-.accordion {
-  background-color: #e9f5ff93;
-  margin-right: 2rem;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  justify-content: space-evenly;
-  gap: 0;
+.btn {
+  height: 50px;
+  border-radius: 0;
 }
-.accordionItem:first-child {
-  border-radius: 10px 10px 0 0;
+.frame {
+  border: solid 3px rgba(150, 150, 150, 0.333);
+  width: min(30rem, 90%);
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(255, 255, 255, 0.744);
 }
-.accordionItem:last-child {
-  border-bottom: none;
-  border-radius: 0 0 10px 10px;
-}
-
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
-  .root {
-    padding: 1rem;
-    font-size: 0.79rem;
-    text-align: left;
-  }
-  .accordion {
-    order: 2;
-    margin: 1.5rem 0;
-  }
-  .video {
-    width: 100%;
-    order: 1;
-  }
   .title {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
+  }
+  .description {
+    width: 100%;
+  }
+  .frame {
+    width: 100%;
+    padding: 5px 1rem;
+    margin: 2rem 0 1rem -1rem;
   }
 }
 
 /* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .root {
-    padding: 1rem;
-    font-size: 0.79rem;
-    text-align: left;
-  }
-  .accordion {
-    order: 2;
-    margin: 1.5rem 0;
-  }
-  .video {
-    width: 100%;
-    order: 1;
-  }
   .title {
-    font-size: 1.5rem;
+    font-size: 2.2rem;
   }
 }
 
 /* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .root {
-    padding: 2rem;
+  .title {
+    font-size: 3rem;
   }
 }
 
 /* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .root {
-    padding: 2rem;
-  }
 }
 
 /* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
   .root {
-    padding: 2rem;
+    padding-left: 8%;
   }
 }
 
@@ -102,13 +72,19 @@
 /* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
 @media only screen and (min-width: 1599px) and (max-width: 1999px) {
   .root {
-    padding: 2rem 10% 6rem 10%;
+    padding-left: 15%;
   }
 }
 
-@media only screen and (min-width: 2000px) {
+@media only screen and (min-width: 2000px) and (max-width: 2400px) {
   .root {
-    padding: 2rem 15% 6rem 15%;
+    padding-left: 20%;
+  }
+}
+
+@media only screen and (min-width: 2401px) {
+  .root {
+    padding-left: 28%;
   }
 }
 /* ========== DARK MODE SUPPORT ========== */

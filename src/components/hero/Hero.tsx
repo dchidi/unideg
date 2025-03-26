@@ -1,20 +1,30 @@
 import React from "react";
 import Button from "../ui/Button";
+import styles from "./Hero.module.css";
+import { AppInfo } from "../../config/constants";
+import { FaLongArrowAltRight } from "react-icons/fa";
+import { Column } from "../layouts/row_column/RowColumn";
+// import Header from "../layouts/header/Header";
 
 interface HeroProps {
   className?: string;
 }
 const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
-    <div className={`${className}`}>
-      <h2>United Degree</h2>
-      <p>
-        Navigate the complex world of medical school admissions with
-        personalized guidance, comprehensive resources, and expert support for
-        international opportunities.
-      </p>
-      <Button label="Find A School" />
-      <Button label="How it works" />
+    <div className={`${styles.root} ${className}`}>
+      {/* <Header /> */}
+      <Column className={styles.frame}>
+        <h2 className={styles.title}>{AppInfo.fullname}</h2>
+        <p className={styles.description}>{AppInfo.heroShortNote}</p>
+      </Column>
+
+      <Button
+        label="Apply Now"
+        onClick={() => {}}
+        color="dark"
+        iconRight={<FaLongArrowAltRight />}
+        className={styles.btn}
+      />
     </div>
   );
 };

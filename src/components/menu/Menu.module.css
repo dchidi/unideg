@@ -1,98 +1,44 @@
-/* ========== DEFAULT STYLES ========== */
 .root {
-  background-color: #3156ae;
+  display: flex;
+  gap: 15px;
+  padding-top: 0.3rem;
+  color: #000;
 }
-.video {
-  width: 50rem;
-  border-radius: 8px;
-}
-.title {
-  font-size: 1.8rem;
-  color: #c2d4ff;
-  text-align: center;
-  background-color: #3156ae;
-  padding-top: 2rem;
-}
-.accordion,
-.video {
-  flex: 1;
-}
-
-.accordion {
-  background-color: #e9f5ff93;
-  margin-right: 2rem;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  justify-content: space-evenly;
-  gap: 0;
-}
-.accordionItem:first-child {
-  border-radius: 10px 10px 0 0;
-}
-.accordionItem:last-child {
-  border-bottom: none;
-  border-radius: 0 0 10px 10px;
+.menuItem:hover {
+  color: #113c8c;
+  cursor: pointer;
 }
 
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
   .root {
-    padding: 1rem;
-    font-size: 0.79rem;
-    text-align: left;
+    flex-direction: row;
   }
-  .accordion {
-    order: 2;
-    margin: 1.5rem 0;
-  }
-  .video {
-    width: 100%;
-    order: 1;
-  }
-  .title {
-    font-size: 1.5rem;
+  .hideOnMobile {
+    display: none;
   }
 }
 
 /* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   .root {
-    padding: 1rem;
-    font-size: 0.79rem;
-    text-align: left;
+    flex-direction: row;
   }
-  .accordion {
-    order: 2;
-    margin: 1.5rem 0;
-  }
-  .video {
-    width: 100%;
-    order: 1;
-  }
-  .title {
-    font-size: 1.5rem;
+  .hideOnMobile {
+    display: none;
   }
 }
 
 /* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .root {
-    padding: 2rem;
-  }
 }
 
 /* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .root {
-    padding: 2rem;
-  }
 }
 
 /* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-  .root {
-    padding: 2rem;
-  }
 }
 
 /* ========== LANDSCAPE MODE (for all devices) ========== */
@@ -102,13 +48,13 @@
 /* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
 @media only screen and (min-width: 1599px) and (max-width: 1999px) {
   .root {
-    padding: 2rem 10% 6rem 10%;
+    padding-top: 0.3rem 1rem;
   }
 }
 
 @media only screen and (min-width: 2000px) {
   .root {
-    padding: 2rem 15% 6rem 15%;
+    padding: 0.3rem 1rem;
   }
 }
 /* ========== DARK MODE SUPPORT ========== */

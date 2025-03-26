@@ -1,80 +1,55 @@
-/* ========== DEFAULT STYLES ========== */
-.coverage {
+.error {
+  height: 100vh;
+  width: 100vw;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2rem;
+  background-color: #142737;
+  color: #c5e5ff;
   gap: 20px;
-  cursor: pointer;
+  font-size: 2rem;
 }
-.item {
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  width: min(280px, 90vw);
-  aspect-ratio: 3/1;
-  display: flex;
-  flex-direction: column;
+.center,
+.link {
   align-items: center;
-  justify-content: center;
-  border-radius: 6px;
+  gap: 10px;
 }
-.label {
-  font-size: 0.8rem;
+.msg {
+  font-size: 1rem;
+  padding-top: 5px;
 }
-.schools,
-.countries,
-.success_stories {
-  background-size: cover;
-  background-position: center;
-  object-fit: cover;
-  color: #fff;
+.link {
+  display: flex;
+  font-size: 0.9rem;
+  cursor: pointer;
+  color: rgb(33, 69, 94);
+  border: solid 1px rgba(226, 239, 250, 0.393);
+  background-color: #c5e5ff;
+  padding: 6px 10px;
+  text-transform: uppercase;
 }
-.schools {
-  background-image: linear-gradient(
-      rgba(44, 58, 99, 0.927),
-      rgba(21, 49, 135, 0.535)
-    ),
-    url("/school_img.jpg");
-}
-.countries {
-  background-image: linear-gradient(
-      rgba(185, 92, 6, 0.927),
-      rgba(177, 95, 18, 0.535)
-    ),
-    url("/countries.jpg");
-}
-.success_stories {
-  background-image: linear-gradient(
-      rgba(35, 90, 62, 0.927),
-      rgba(9, 105, 57, 0.535)
-    ),
-    url("/success_stories.jpg");
-}
+
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
-  .item {
-    max-height: 100px;
+  .center {
+    flex-direction: row;
   }
-  .coverage {
-    gap: 10px;
+  .error {
+    font-size: 1.5rem;
   }
 }
 
 /* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .coverage {
+  .center {
     flex-direction: row;
-    padding: 0 2rem 2rem 2rem;
-    gap: 10px;
   }
-  .item {
-    aspect-ratio: 2/1;
+  .error {
+    font-size: 1.8rem;
   }
 }
 
 /* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .coverage {
-    padding: 0 2rem 2rem 2rem;
-  }
 }
 
 /* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */

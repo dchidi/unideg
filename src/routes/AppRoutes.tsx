@@ -7,6 +7,7 @@ import HowItWorks from "../pages/HowItWorks";
 // Lazy load components
 const ResetPassword = lazy(() => import("../pages/ResetPassword"));
 const Registration = lazy(() => import("../pages/Registration"));
+const Programs = lazy(() => import("../pages/Programs"));
 const Home = lazy(() => import("../pages/Home"));
 const Login = lazy(() => import("../pages/Login"));
 const Profile = lazy(() => import("../pages/Profile"));
@@ -26,6 +27,7 @@ const AppRoutes: React.FC = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Registration />} />
+          <Route path="/programs" element={<Programs />} />
           <Route path="/scholarship" element={<Scholarship />} />
           <Route path="/how-it-works" element={<HowItWorks />} />
           <Route path="/reset-password" element={<ResetPassword />} />

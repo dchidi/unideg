@@ -8,11 +8,16 @@
   gap: 10px;
 }
 
-.dark {
+.light {
   border: solid 1px #353c47;
   color: #9ca3af;
 }
 
+.dark {
+  /* border: solid 1px #283d67; */
+  color: #fff;
+  background-color: #283d67;
+}
 .primary {
   /* border: solid 1px #353c47; */
   border-radius: 0;

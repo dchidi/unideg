@@ -6,8 +6,8 @@ interface ButtonProps {
   className?: string;
   iconLeft?: React.ReactNode;
   iconRight?: React.ReactNode;
-  color?: "default" | "dark" | "primary";
-  label: string;
+  color?: "default" | "dark" | "primary" | "light";
+  label?: string;
   onClick: () => void;
 }
 const Button: React.FC<ButtonProps> = ({

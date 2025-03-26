@@ -1,56 +1,43 @@
 /* ========== DEFAULT STYLES ========== */
+.scrolled {
+  background-color: #fff;
+}
 .root {
+  /* min-height: 80vh; */
+  margin-top: 5%;
+  padding: 1rem;
   background-color: #3156ae;
+  color: #fff;
+  gap: 10px;
 }
-.video {
-  width: 50rem;
-  border-radius: 8px;
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
 }
-.title {
-  font-size: 1.8rem;
-  color: #c2d4ff;
-  text-align: center;
-  background-color: #3156ae;
-  padding-top: 2rem;
+.msg {
+  width: 50vw;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
 }
-.accordion,
-.video {
-  flex: 1;
+.links {
+  gap: 10px;
 }
-
-.accordion {
-  background-color: #e9f5ff93;
-  margin-right: 2rem;
-  border-radius: 10px;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  justify-content: space-evenly;
-  gap: 0;
+.links button {
+  border-radius: 100px;
+  font-size: 0.8rem;
 }
-.accordionItem:first-child {
-  border-radius: 10px 10px 0 0;
+.active {
+  background-color: #fff;
+  color: #2d457d;
 }
-.accordionItem:last-child {
-  border-bottom: none;
-  border-radius: 0 0 10px 10px;
-}
-
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
   .root {
     padding: 1rem;
     font-size: 0.79rem;
-    text-align: left;
-  }
-  .accordion {
-    order: 2;
-    margin: 1.5rem 0;
-  }
-  .video {
-    width: 100%;
-    order: 1;
-  }
-  .title {
-    font-size: 1.5rem;
   }
 }
 
@@ -59,18 +46,6 @@
   .root {
     padding: 1rem;
     font-size: 0.79rem;
-    text-align: left;
-  }
-  .accordion {
-    order: 2;
-    margin: 1.5rem 0;
-  }
-  .video {
-    width: 100%;
-    order: 1;
-  }
-  .title {
-    font-size: 1.5rem;
   }
 }
 

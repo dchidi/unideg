@@ -5,18 +5,18 @@ import Features from "../components/features/Features";
 import Coverage from "../components/coverage/Coverage";
 import Footer from "../components/footer/Footer";
 import Testimonials from "../components/testimonials/Testimonials";
-
+import styles from "./css/Home.module.css";
+import useHeader from "../hooks/useHeader";
 const Home: React.FC = () => {
+  const { scrolled } = useHeader();
+
   return (
     <>
-      {/* <Header />
+      <Header className={`${scrolled ? styles["scrolled"] : ""}`} />
       <Hero />
-      */}
-      <div>
-        <Features />
-        <Coverage />
-        <Testimonials />
-      </div>
+      <Features />
+      <Testimonials />
+      <Coverage />
       <Footer />
     </>
   );
