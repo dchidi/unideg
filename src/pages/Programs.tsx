@@ -6,36 +6,119 @@ import styles from "./css/Programs.module.css";
 import { Column, Row } from "../components/layouts/row_column/RowColumn";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import Button from "../components/ui/Button";
+import ProgramDetails from "../components/ui/ProgramDetails";
 
 const Programs: React.FC = () => {
   const { scrolled } = useHeader();
   const programs = [
-    {
-      id: 1,
-      name: "All Programs",
-      link: "all-programs",
-      subMenu: [
-        {
-          id: 1,
-          title: "Medical Sciences",
-          description:
-            "Conduct original research at the highest level, contributing to advancements in medical knowledge and healthcare practice.",
-          duration: "3-4 Years",
-          highlights: [
-            "Independent research project",
-            "Advanced methodological training",
-            "Academic publication and presentation",
-          ],
-        },
-      ],
-    },
+    { id: 1, name: "All Programs", link: "all-programs" },
     { id: 2, name: "Bachelor's Degree", link: "bachelor-degree" },
     { id: 3, name: "Master's Degree", link: "master-degree" },
     { id: 4, name: "Doctoral Degree", link: "doctorate-degree" },
   ];
+  const programDetails = [
+    {
+      id: "1",
+      degreeType: "Bsc",
+      degree: "Biomedical Sciences",
+      studyDuration: "3-4 Years",
+      description: ` A comprehensive program that provides in-depth knowledge of human
+            biology and disease processes, preparing students for careers in
+            medical research and healthcare.`,
+      highlights: [
+        "Foundation in biological and medical sciences",
+        "Laboratory skills and techniques",
+        "Research methodology training",
+      ],
+    },
+    {
+      id: "1",
+      degreeType: "Bsc",
+      degree: "Biomedical Sciences",
+      studyDuration: "3-4 Years",
+      description: ` A comprehensive program that provides in-depth knowledge of human
+            biology and disease processes, preparing students for careers in
+            medical research and healthcare.`,
+      highlights: [
+        "Foundation in biological and medical sciences",
+        "Laboratory skills and techniques",
+        "Research methodology training",
+      ],
+    },
+    {
+      id: "1",
+      degreeType: "Bsc",
+      degree: "Biomedical Sciences",
+      studyDuration: "3-4 Years",
+      description: ` A comprehensive program that provides in-depth knowledge of human
+            biology and disease processes, preparing students for careers in
+            medical research and healthcare.`,
+      highlights: [
+        "Foundation in biological and medical sciences",
+        "Laboratory skills and techniques",
+        "Research methodology training",
+      ],
+    },
+    {
+      id: "1",
+      degreeType: "Bsc",
+      degree: "Biomedical Sciences",
+      studyDuration: "3-4 Years",
+      description: ` A comprehensive program that provides in-depth knowledge of human
+            biology and disease processes, preparing students for careers in
+            medical research and healthcare.`,
+      highlights: [
+        "Foundation in biological and medical sciences",
+        "Laboratory skills and techniques",
+        "Research methodology training",
+      ],
+    },
+    {
+      id: "1",
+      degreeType: "Bsc",
+      degree: "Biomedical Sciences",
+      studyDuration: "3-4 Years",
+      description: ` A comprehensive program that provides in-depth knowledge of human
+            biology and disease processes, preparing students for careers in
+            medical research and healthcare.`,
+      highlights: [
+        "Foundation in biological and medical sciences",
+        "Laboratory skills and techniques",
+        "Research methodology training",
+      ],
+    },
+    {
+      id: "1",
+      degreeType: "Bsc",
+      degree: "Biomedical Sciences",
+      studyDuration: "3-4 Years",
+      description: ` A comprehensive program that provides in-depth knowledge of human
+            biology and disease processes, preparing students for careers in
+            medical research and healthcare.`,
+      highlights: [
+        "Foundation in biological and medical sciences",
+        "Laboratory skills and techniques",
+        "Research methodology training",
+      ],
+    },
+    {
+      id: "1",
+      degreeType: "Bsc",
+      degree: "Biomedical Sciences",
+      studyDuration: "3-4 Years",
+      description: ` A comprehensive program that provides in-depth knowledge of human
+            biology and disease processes, preparing students for careers in
+            medical research and healthcare.`,
+      highlights: [
+        "Foundation in biological and medical sciences",
+        "Laboratory skills and techniques",
+        "Research methodology training",
+      ],
+    },
+  ];
   return (
     <>
-      <Header className={`${scrolled ? styles["scrolled"] : ""}`} />
+      <Header className={`${scrolled ? "scrolled" : ""}`} />
       <Column className={styles.root}>
         <a href="/home" className={styles.backLink}>
           <FaLongArrowAltLeft /> Back to Home
@@ -58,7 +141,11 @@ const Programs: React.FC = () => {
           ))}
         </Row>
       </Column>
-      <Row>content</Row>
+      <Row className={styles.content}>
+        {programDetails.map((item, index) => (
+          <ProgramDetails data={item} key={index} />
+        ))}
+      </Row>
       <Footer />
     </>
   );

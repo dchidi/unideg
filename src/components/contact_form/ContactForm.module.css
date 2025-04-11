@@ -1,0 +1,53 @@
+/* ========== DEFAULT STYLES ========== */
+.root {
+  margin-top: 1.1rem;
+  align-items: center;
+  gap: 1rem;
+}
+.btn {
+  font-size: 0.85rem;
+  border-radius: 0;
+}
+/* ========== SMALL AND MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (max-width: 767px) {
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1599px) {
+}
+@media only screen and (min-width: 768px) {
+}
+
+/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
+@media only screen and (min-width: 1599px) and (max-width: 1999px) {
+}
+
+@media only screen and (min-width: 2000px) {
+}
+
+/* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
+@media only screen and (max-width: 575px) {
+}
+
+/* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+}
+
+/* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+}
+
+/* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+}
+
+/* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+}
+
+/* ========== LANDSCAPE MODE (for all devices) ========== */
+@media only screen and (orientation: landscape) {
+}
+
+/* ========== DARK MODE SUPPORT ========== */
+@media (prefers-color-scheme: dark) {
+}

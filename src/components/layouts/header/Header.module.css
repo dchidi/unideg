@@ -19,10 +19,6 @@
 .actions {
   margin-left: auto;
 }
-.showOnMobile,
-.mobileMenu {
-  display: none;
-}
 .navBtn,
 .navBtnClose {
   padding: 5px 8px 2px 8px;
@@ -30,6 +26,8 @@
 }
 .mobileMenu {
   position: fixed;
+  top: 0;
+  /* height: 100%; */
   z-index: 200;
   background-color: rgba(40, 62, 104, 0.986);
   transition: background-color 0.3s ease;
@@ -54,6 +52,19 @@
 ul.mobileMenuList li {
   padding-bottom: 2rem;
 }
+
+.showOnMobile,
+.mobileMenu {
+  display: none !important;
+}
+
+.login {
+  max-width: 500px;
+  width: 90%;
+  overflow: auto;
+  background: radial-gradient(circle, #c4dbff, #d3e7ff) !important;
+}
+
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
   .root,
@@ -66,7 +77,7 @@ ul.mobileMenuList li {
 
   .showOnMobile,
   .mobileMenu {
-    display: inline-block;
+    display: inline-block !important;
   }
 }
 
@@ -81,7 +92,7 @@ ul.mobileMenuList li {
   }
   .showOnMobile,
   .mobileMenu {
-    display: inline-block;
+    display: inline-block !important;
   }
 }
 

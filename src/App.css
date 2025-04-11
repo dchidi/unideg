@@ -126,6 +126,11 @@ body {
   font-size: var(--font-size-medium);
 }
 
+.scrolled {
+  background-color: #fff !important;
+  border-bottom: solid 1px #a5b2c8;
+}
+
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
   body {

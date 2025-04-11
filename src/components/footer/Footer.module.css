@@ -44,6 +44,9 @@ ul.footerQuickLinks {
   display: flex;
   gap: 2rem;
 }
+.footerBottomAlignRight span {
+  cursor: pointer;
+}
 .footerFindASchoolBtn {
   display: flex;
   place-content: center;
@@ -52,6 +55,20 @@ ul.footerQuickLinks {
 .bigBtn {
   width: 200px;
   height: 60px;
+}
+
+.terms_conditions,
+.privacy_policy {
+  max-width: 800px;
+  width: 90%;
+  height: 90vh;
+  overflow: auto;
+}
+.contactForm {
+  max-width: 500px;
+  width: 90%;
+  overflow: auto;
+  background: radial-gradient(circle, #c4dbff, #d3e7ff) !important;
 }
 
 /* ========== SMALL AND MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */

@@ -1,0 +1,97 @@
+.program {
+  width: min(100%, 460px);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  padding: 2rem;
+  border-radius: 6px;
+}
+.duration {
+  margin-left: auto;
+  font-size: 0.9rem;
+}
+.degreeType {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+}
+.description {
+  margin: 1.5rem 0;
+}
+
+ul.highlight {
+  margin: 0.5rem 0;
+}
+
+ul.highlight li {
+  background-color: rgb(175, 209, 255);
+  margin: 0.5rem 0;
+  padding: 10px 15px;
+  border-radius: 4px;
+}
+.btn {
+  padding: 15px 0;
+}
+
+/* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
+@media only screen and (max-width: 767px) {
+  .top {
+    /* background-color: rgb(226, 200, 200); */
+    position: relative;
+  }
+  .duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+/* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .program {
+    width: min(100%, 420px);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding: 2rem;
+    border-radius: 6px;
+  }
+}
+
+/* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .program {
+    width: calc(96% / 2) !important;
+  }
+}
+
+/* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .program {
+    width: calc(96% / 2) !important;
+  }
+}
+
+/* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .program {
+    width: calc(95% / 3);
+  }
+}
+
+/* ========== LANDSCAPE MODE (for all devices) ========== */
+@media only screen and (orientation: landscape) {
+  .program {
+    width: calc(95% / 3);
+  }
+}
+
+/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
+@media only screen and (min-width: 1599px) and (max-width: 1999px) {
+}
+
+@media only screen and (min-width: 2000px) {
+}
+/* ========== DARK MODE SUPPORT ========== */
+@media (prefers-color-scheme: dark) {
+}

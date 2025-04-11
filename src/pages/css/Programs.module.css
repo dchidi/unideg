@@ -1,11 +1,13 @@
 /* ========== DEFAULT STYLES ========== */
-.scrolled {
-  background-color: #fff;
+
+.root,
+.content {
+  padding: 1rem;
 }
 .root {
   /* min-height: 80vh; */
   margin-top: 5%;
-  padding: 1rem;
+  /* padding: 1rem; */
   background-color: #3156ae;
   color: #fff;
   gap: 10px;
@@ -33,40 +35,79 @@
   background-color: #fff;
   color: #2d457d;
 }
+.content {
+  flex-wrap: wrap;
+  gap: 20px;
+  /* justify-content: center; */
+}
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
-@media only screen and (max-width: 575px) {
+@media only screen and (max-width: 767px) {
   .root {
-    padding: 1rem;
+    margin-top: 4.2rem;
+  }
+  .root,
+  .content {
+    padding: 3rem 2rem;
     font-size: 0.79rem;
+  }
+  .content {
+    align-items: center;
+  }
+  .msg {
+    width: 100%;
+  }
+  .links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .links button {
+    width: fit-content;
   }
 }
 
 /* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
+  .content {
+    align-items: center;
+  }
   .root {
-    padding: 1rem;
-    font-size: 0.79rem;
+    padding: 2rem;
   }
 }
 
 /* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .root {
+  .root,
+  .content {
     padding: 2rem;
+  }
+  .content {
+    align-items: center;
+  }
+  .root {
+    margin-top: 4.5rem;
   }
 }
 
 /* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-  .root {
+  .root,
+  .content {
     padding: 2rem;
+  }
+  .root {
+    margin-top: 4.5rem;
   }
 }
 
 /* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-  .root {
+  .root,
+  .content {
     padding: 2rem;
+  }
+  .root {
+    margin-top: 4.3rem;
   }
 }
 
@@ -76,14 +117,22 @@
 
 /* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
 @media only screen and (min-width: 1599px) and (max-width: 1999px) {
-  .root {
+  .root,
+  .content {
     padding: 2rem 10% 6rem 10%;
+  }
+  .root {
+    margin-top: 4.3rem;
   }
 }
 
 @media only screen and (min-width: 2000px) {
-  .root {
+  .root,
+  .content {
     padding: 2rem 15% 6rem 15%;
+  }
+  .root {
+    margin-top: 4.3rem;
   }
 }
 /* ========== DARK MODE SUPPORT ========== */

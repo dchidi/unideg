@@ -1,73 +1,51 @@
 /* ========== DEFAULT STYLES ========== */
-
 .root {
-  color: black;
-  padding: 0 1rem;
-  border-bottom: solid 1px rgba(219, 239, 255, 0.327);
-  display: flex;
-  justify-content: center;
-  height: 100%;
-}
-.root.active {
-  background-color: #e9f5ff;
-  padding: 1rem;
-  transition: background-color 1s ease;
-}
-.title {
+  margin-top: 1.1rem;
   align-items: center;
+  gap: 1rem;
+}
+.btn {
+  font-size: 0.85rem;
+  border-radius: 0;
+  width: 90%;
+  height: 50px;
+}
+.action {
+  justify-content: center;
+  align-items: center;
+}
+.action button {
   cursor: pointer;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
+  font-size: 0.9rem;
 }
-.root.active .title {
-  padding-bottom: 1rem;
-  font-weight: 700;
+.hideOnMobile {
+  display: inline-block;
 }
-.caret {
-  margin-left: auto;
+/* ========== SMALL AND MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (max-width: 767px) {
+  .hideOnMobile {
+    display: none;
+  }
 }
-.details {
-  font-size: 0.87rem;
-  color: #444;
+
+@media only screen and (min-width: 768px) and (max-width: 1599px) {
 }
+@media only screen and (min-width: 768px) {
+}
+
+/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
+@media only screen and (min-width: 1599px) and (max-width: 1999px) {
+}
+
+@media only screen and (min-width: 2000px) {
+}
+
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
-  .root {
-    min-height: 50px;
-  }
-  .title {
-    align-items: flex-start;
-  }
-  .root.active .title {
-    padding-bottom: 0.2rem;
-  }
-
-  .caret {
-    margin-top: -1rem;
-  }
-  .details {
-    padding-top: 1rem;
-  }
 }
 
 /* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .root {
-    min-height: 50px;
-  }
-  .title {
-    align-items: flex-start;
-  }
-  .root.active .title {
-    padding-bottom: 0.2rem;
-  }
-
-  .caret {
-    margin-top: -1rem;
-  }
-  .details {
-    padding-top: 1rem;
-  }
 }
 
 /* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
@@ -80,13 +58,6 @@
 
 /* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
 @media only screen and (min-width: 1200px) and (max-width: 1599px) {
-}
-
-/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
-@media only screen and (min-width: 1599px) and (max-width: 1999px) {
-}
-
-@media only screen and (min-width: 2000px) {
 }
 
 /* ========== LANDSCAPE MODE (for all devices) ========== */

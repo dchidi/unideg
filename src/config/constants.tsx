@@ -38,10 +38,11 @@ export const FeaturesList = [
 ];
 
 export const MenuList = [
+  { name: "Home", label: "home", topMenu: true },
   { name: "Programs", label: "programs", topMenu: true },
-  { name: "Scholarship", label: "scholarship", topMenu: true },
+  // { name: "Scholarship", label: "scholarship", topMenu: true },
   { name: "How it works", label: "how-it-works", topMenu: true },
-  { name: "Login", label: "login", topMenu: false },
+  // { name: "Login", label: "login", topMenu: false },
 ];
 
 export const CoverageList = [
