@@ -1,0 +1,203 @@
+/* ========== DEFAULT STYLES ========== */
+
+.root {
+  padding: 1rem;
+  padding-top: 5rem !important;
+  margin-top: 5%;
+  gap: 10px;
+}
+.center,
+.actions {
+  justify-content: center;
+  align-items: center;
+}
+.top {
+  gap: 10px;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+.top h1,
+.top p {
+  text-align: center;
+  font-size: 1.2rem;
+}
+.top h1 {
+  font-size: 3.2rem;
+  font-weight: bolder;
+  color: #31467c;
+}
+
+.actions {
+  margin-top: 2rem;
+  gap: 10px;
+}
+.actions button {
+  min-width: 200px;
+  border-radius: 0px;
+  height: 50px;
+}
+.actions button:last-child {
+  color: #23335b;
+}
+.root h3 {
+  font-size: 1.9rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+
+.card {
+  position: relative;
+  gap: 10px;
+  padding: 1.5rem;
+  width: calc(90% / 3);
+  /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  border-radius: 10px;
+}
+.icon {
+  font-size: 30px;
+  color: #49525e;
+}
+.count {
+  position: absolute;
+  top: -20px;
+  right: -10px;
+  /* left: 20%; */
+  background-color: #fff;
+  color: black;
+  font-weight: bold;
+  border-radius: 100px;
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px; */
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  width: 50px;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.one {
+  background: radial-gradient(circle at center, #fffaf4 0%, #ffe0b3 100%);
+}
+
+.two {
+  background: radial-gradient(circle at center, #f3fcff 0%, #b3ebff 100%);
+}
+
+.three {
+  background: radial-gradient(circle at center, #f4f2ff 0%, #c1baff 100%);
+}
+
+.four {
+  background: radial-gradient(circle at center, #fff1f1 0%, #ffb3b3 100%);
+}
+
+.five {
+  background: radial-gradient(circle at center, #e7f0ff 0%, #b3d4ff 100%);
+}
+/* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
+@media only screen and (max-width: 767px) {
+  .root {
+    margin-top: 4.2rem;
+    padding: 3rem 2rem;
+    font-size: 0.79rem;
+  }
+  .top h1 {
+    font-size: 2rem;
+  }
+  .top p {
+    font-size: 1rem;
+  }
+
+  .root h3 {
+    font-size: 1.3rem;
+  }
+  .root h4 {
+    font-size: 1rem;
+  }
+  .card {
+    width: min(400px, 100%);
+  }
+  .count {
+    font-size: 0.9rem;
+  }
+  .steps {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* ========== MEDIUM DEVICES (Tablets, landscape mode, 576px - 767px) ========== */
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .root {
+    padding: 2rem;
+  }
+}
+
+/* ========== LARGE DEVICES (Tablets, small laptops, 768px - 991px) ========== */
+@media only screen and (min-width: 768px) and (max-width: 899px) {
+  .root {
+    padding: 2rem;
+    margin-top: 4.5rem;
+  }
+  .card {
+    width: calc(96% / 2);
+  }
+  .steps {
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media only screen and (min-width: 900px) and (max-width: 991px) {
+  .root {
+    padding: 2rem;
+    margin-top: 4.5rem;
+  }
+}
+
+/* ========== EXTRA LARGE DEVICES (Laptops, desktops, 992px - 1199px) ========== */
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .root {
+    padding: 2rem;
+    margin-top: 4.5rem;
+  }
+}
+
+/* ========== ULTRA WIDE SCREENS (Desktops, 1200px - 1599px) ========== */
+@media only screen and (min-width: 1200px) and (max-width: 1599px) {
+  .root {
+    padding: 2rem;
+    margin-top: 4.3rem;
+  }
+}
+
+/* ========== LANDSCAPE MODE (for all devices) ========== */
+@media only screen and (orientation: landscape) {
+}
+
+/* ========== 4K+ LARGE SCREENS (1600px and above) ========== */
+@media only screen and (min-width: 1599px) and (max-width: 1999px) {
+  .root {
+    padding: 2rem 10% 6rem 10%;
+    margin-top: 4.3rem;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  .root {
+    padding: 2rem 15% 6rem 15%;
+    margin-top: 4.3rem;
+  }
+}
+/* ========== DARK MODE SUPPORT ========== */
+@media (prefers-color-scheme: dark) {
+}

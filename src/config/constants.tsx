@@ -45,6 +45,13 @@ export const MenuList = [
   // { name: "Login", label: "login", topMenu: false },
 ];
 
+export const ProfileMenuList = [
+  { name: "Dashboard", label: "dashboard" },
+  { name: "Application", label: "application" },
+  { name: "Inbox", label: "inbox" },
+  { name: "Profile", label: "profile" },
+];
+
 export const CoverageList = [
   { name: "Schools", value: "500+", label: "schools" },
   { name: "Countries", value: "120+", label: "countries" },

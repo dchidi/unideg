@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 const useTestimonials = () => {
   const [currentReviewIndex, setCurrentReviewIndex] = useState(0);
   const usersReview = [
@@ -8,8 +9,7 @@ const useTestimonials = () => {
       school: "Griffith College Dublin",
       ratings: 5,
       country: "Ireland",
-      comment: `This platform helped me to find the school of my dream without any
-          hassle. Thanks Unidezk`,
+      comment: `This platform helped me to find the school of my dream without any hassle. Thanks Unidezk`,
     },
     {
       name: "Ify Duru",
@@ -30,15 +30,15 @@ const useTestimonials = () => {
   ];
 
   const totalReviewCount = usersReview.length - 1;
+
   const nextReview = () =>
-    setCurrentReviewIndex(
-      currentReviewIndex < totalReviewCount
-        ? currentReviewIndex + 1
-        : totalReviewCount
-    );
+    setCurrentReviewIndex((prev) => (prev < totalReviewCount ? prev + 1 : 0));
+
   const prevReview = () =>
-    setCurrentReviewIndex(currentReviewIndex > 0 ? currentReviewIndex - 1 : 0);
+    setCurrentReviewIndex((prev) => (prev > 0 ? prev - 1 : totalReviewCount));
+
   const userReview = usersReview[currentReviewIndex];
+
   return {
     userReview,
     nextReview,
@@ -47,4 +47,5 @@ const useTestimonials = () => {
     totalReviewCount,
   };
 };
+
 export default useTestimonials;

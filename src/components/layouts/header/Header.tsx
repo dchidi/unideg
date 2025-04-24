@@ -8,29 +8,16 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdOutlineClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 import useMenu from "../../../hooks/useMenu";
-import Modal from "../modal/Modal";
-import { Login, RetrievePassword } from "../../login/Login";
-import { Registration } from "../../registration/Registration";
+
+import { useAppState } from "../../../store/AppContext";
 
 interface HeaderProps {
   className?: string;
 }
-type ModalStateProp = {
-  login: boolean;
-  register: boolean;
-  forgotPassword: boolean;
-};
-
-const initState = {
-  login: false,
-  register: false,
-  forgotPassword: false,
-};
 
 const Header: React.FC<HeaderProps> = ({ className }) => {
   const navigate = useNavigate();
   const [isMenuToggled, setIsMenuToggled] = useState(false);
-  const [isModalOpen, setModalOpen] = useState<ModalStateProp>(initState);
 
   const toggleMenu = () => {
     setIsMenuToggled(!isMenuToggled);
@@ -42,9 +29,7 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
     menuUpdateHandler(e, toggleMenu);
   };
 
-  const toggleModal = (args: {}) => {
-    setModalOpen({ ...initState, ...args });
-  };
+  const { dispatch } = useAppState();
 
   return (
     <>
@@ -60,11 +45,11 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
           <Row className={styles.hideOnMobile}>
             <Button
               label="Login"
-              onClick={() => setModalOpen({ ...initState, login: true })}
+              onClick={() => dispatch({ type: "login", payload: true })}
             />
             <Button
               label="Get Started"
-              onClick={() => toggleModal({ register: true })}
+              onClick={() => dispatch({ type: "register", payload: true })}
               color="dark"
             />
           </Row>
@@ -75,9 +60,6 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
             iconRight={<GiHamburgerMenu size={25} />}
           />
         </Row>
-        {/* <Row className={styles.actions}> */}
-
-        {/* </Row> */}
       </Row>
       {isMenuToggled && (
         <Column className={styles.mobileMenu}>
@@ -93,50 +75,19 @@ const Header: React.FC<HeaderProps> = ({ className }) => {
                 {item.name}
               </li>
             ))}
-            <li onClick={() => setModalOpen({ ...initState, login: true })}>
+            <li onClick={() => dispatch({ type: "login", payload: true })}>
               Login
             </li>
             <li>
               <Button
                 label="Get Started"
-                onClick={() => toggleModal({ register: true })}
+                onClick={() => dispatch({ type: "register", payload: true })}
                 color="primary"
               />
             </li>
           </ul>
         </Column>
       )}
-      <Modal
-        isOpen={isModalOpen.login}
-        onClose={() => setModalOpen({ ...initState, login: false })}
-        className={styles.login}
-      >
-        <Login
-          retrievePwdFn={() => toggleModal({ forgotPassword: true })}
-          registerFn={() => toggleModal({ register: true })}
-        />
-      </Modal>
-      <Modal
-        isOpen={isModalOpen.forgotPassword}
-        onClose={() => setModalOpen({ ...initState, forgotPassword: false })}
-        className={styles.login}
-      >
-        <RetrievePassword
-          loginFn={() => toggleModal({ login: true })}
-          registerFn={() => toggleModal({ register: true })}
-        />
-      </Modal>
-
-      <Modal
-        isOpen={isModalOpen.register}
-        onClose={() => setModalOpen({ ...initState, register: false })}
-        className={styles.login}
-      >
-        <Registration
-          loginFn={() => toggleModal({ login: true })}
-          retrievePwdFn={() => toggleModal({ forgotPassword: true })}
-        />
-      </Modal>
     </>
   );
 };

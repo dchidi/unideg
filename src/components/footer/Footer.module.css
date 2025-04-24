@@ -10,7 +10,7 @@
 .socialIcons a {
   background-color: #353c47;
   color: #ffffff;
-  width: 35px;
+  width: 40px;
   aspect-ratio: 1;
   place-content: center;
   text-align: center;
@@ -24,6 +24,9 @@ ul.footerQuickLinks {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+}
+ul.footerQuickLinks li {
+  cursor: pointer;
 }
 .contactIcons {
   display: flex;
@@ -83,10 +86,10 @@ ul.footerQuickLinks {
     justify-content: center;
     gap: 15px;
     margin-top: 1rem;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
   }
   .socialIcons a {
-    width: 25px;
+    width: 35px;
   }
 
   .footerTitle {
@@ -152,7 +155,7 @@ ul.footerQuickLinks {
     margin-top: 1rem;
   }
   .socialIcons a {
-    width: 30px;
+    width: 35px;
   }
   .footerTitle {
     margin-top: 2rem;

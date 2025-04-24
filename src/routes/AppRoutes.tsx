@@ -8,8 +8,13 @@ import HowItWorks from "../pages/HowItWorks";
 const Programs = lazy(() => import("../pages/Programs"));
 const Home = lazy(() => import("../pages/Home"));
 const Login = lazy(() => import("../pages/Login"));
-const Profile = lazy(() => import("../pages/Profile"));
-const PageLayout = lazy(
+const ProfileDashboard = lazy(() => import("../components/profile/Dashboard"));
+const ProfileInbox = lazy(() => import("../components/profile/Inbox"));
+const ProfileApplication = lazy(
+  () => import("../components/profile/Application")
+);
+const ManageProfile = lazy(() => import("../components/profile/ManageProfile"));
+const ProfileLayout = lazy(
   () => import("../components/layouts/profile/ProfileLayout")
 );
 const Error404 = lazy(() => import("../pages/Error404"));
@@ -33,11 +38,15 @@ const AppRoutes: React.FC = () => {
             path="/profile"
             element={
               <ProtectedRoute>
-                <PageLayout />
+                <ProfileLayout />
               </ProtectedRoute>
             }
           >
-            <Route index element={<Profile />} />
+            <Route index element={<ProfileDashboard />} />
+            <Route path="dashboard" element={<ProfileDashboard />} />
+            <Route path="application" element={<ProfileApplication />} />
+            <Route path="inbox" element={<ProfileInbox />} />
+            <Route path="profile " element={<ManageProfile />} />
             {/* <Route path="profile" element={<Profile />} /> */}
           </Route>
 

@@ -4,11 +4,14 @@
   padding-top: 0.3rem;
   color: #000;
 }
-.menuItem:hover {
+.menuItem:hover,
+.active {
   color: #113c8c;
   cursor: pointer;
 }
-
+.active {
+  border-bottom: solid 3px #113c8c;
+}
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
   .root {

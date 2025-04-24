@@ -3,13 +3,13 @@ import YouTube from "react-youtube";
 import styles from "./css/YoutubeVideoPlayer.module.css";
 
 interface YoutubeVideoPlayerProps {
-  className: string;
+  className?: string;
   videoId: string;
 }
 
 const YoutubeVideoPlayer: React.FC<YoutubeVideoPlayerProps> = ({
   videoId = "",
-  className,
+  className = "",
 }) => {
   // Define options for the player
   const opts = {

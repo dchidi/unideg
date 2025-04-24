@@ -4,12 +4,14 @@ import styles from "./Hero.module.css";
 import { AppInfo } from "../../config/constants";
 import { FaLongArrowAltRight } from "react-icons/fa";
 import { Column } from "../layouts/row_column/RowColumn";
+import { useAppState } from "../../store/AppContext";
 // import Header from "../layouts/header/Header";
 
 interface HeroProps {
   className?: string;
 }
 const Hero: React.FC<HeroProps> = ({ className }) => {
+  const { dispatch } = useAppState();
   return (
     <div className={`${styles.root} ${className}`}>
       {/* <Header /> */}
@@ -20,7 +22,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
       <Button
         label="Apply Now"
-        onClick={() => {}}
+        onClick={() => dispatch({ type: "login", payload: true })}
         color="dark"
         iconRight={<FaLongArrowAltRight />}
         className={styles.btn}

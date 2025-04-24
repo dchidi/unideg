@@ -1,46 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Footer.module.css";
 import { Column, Row } from "../layouts/row_column/RowColumn";
 import { AppInfo, MenuList, SocialMediaHandle } from "../../config/constants";
 import Button from "../ui/Button";
 import { MdOutlineMail } from "react-icons/md";
 import { FaLongArrowAltRight } from "react-icons/fa";
-import Modal from "../layouts/modal/Modal";
-import Cookies from "../cookies/Cookies";
-import { useLocalStorage } from "../../hooks/useHelpers";
-import TermsConditions from "../terms_conditions/TermsConditions";
-import PrivacyPolicy from "../privacy_policy/PrivacyPolicy";
-import ContactForm from "../contact_form/ContactForm";
 import useMenu from "../../hooks/useMenu";
+import { useAppState } from "../../store/AppContext";
 
 interface FooterProps {
   className?: string;
 }
 const Footer: React.FC<FooterProps> = ({ className }) => {
   const activeSocialMedia = SocialMediaHandle.filter((item) => item.isActive);
-
   const { menuUpdateHandler } = useMenu();
-
-  const { localStore } = useLocalStorage();
-
-  const [isModalOpen, setModalOpen] = useState<{
-    terms_conditions: boolean;
-    privacy_policy: boolean;
-    cookies: boolean;
-    login: boolean;
-    contact_us: boolean;
-  }>({
-    terms_conditions: false,
-    privacy_policy: false,
-    cookies: !localStore.acceptCookies,
-    login: false,
-    contact_us: false,
-  });
-
-  const contactUsHandler = () => {
-    setModalOpen((prev) => ({ ...prev, contact_us: true }));
-  };
-  const findSchoolHandler = () => {};
+  const { dispatch } = useAppState();
 
   return (
     <>
@@ -69,7 +43,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
                   data-label={menu.label}
                   onClick={menuUpdateHandler}
                 >
-                  <a href={menu.label}>{menu.name}</a>
+                  {menu.name}
                 </li>
               ))}
             </ul>
@@ -85,7 +59,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
             <div>
               <Button
                 label="Contact Us"
-                onClick={contactUsHandler}
+                onClick={() => dispatch({ type: "contact_us", payload: true })}
                 iconLeft={<MdOutlineMail />}
                 color="dark"
               />
@@ -96,7 +70,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           >
             <Button
               label="Apply Now"
-              onClick={findSchoolHandler}
+              onClick={() => dispatch({ type: "login", payload: true })}
               color="primary"
               iconRight={<FaLongArrowAltRight />}
               className={styles.bigBtn}
@@ -110,66 +84,24 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
           <div className={styles.footerBottomAlignRight}>
             <span
               onClick={() =>
-                setModalOpen((prev) => ({ ...prev, privacy_policy: true }))
+                dispatch({ type: "privacy_policy", payload: true })
               }
             >
               Privacy Policy
             </span>
             <span
               onClick={() =>
-                setModalOpen((prev) => ({ ...prev, terms_conditions: true }))
+                dispatch({ type: "terms_conditions", payload: true })
               }
             >
               Terms of Service
             </span>
-            <span
-              onClick={() =>
-                setModalOpen((prev) => ({ ...prev, cookies: true }))
-              }
-            >
+            <span onClick={() => dispatch({ type: "cookies", payload: true })}>
               Cookies Policy
             </span>
           </div>
         </Row>
       </Column>
-      <Modal
-        isOpen={isModalOpen.privacy_policy}
-        onClose={() =>
-          setModalOpen((prev) => ({ ...prev, privacy_policy: false }))
-        }
-        className={styles.privacy_policy}
-      >
-        <PrivacyPolicy />
-      </Modal>
-      <Modal
-        isOpen={isModalOpen.terms_conditions}
-        onClose={() =>
-          setModalOpen((prev) => ({ ...prev, terms_conditions: false }))
-        }
-        className={styles.terms_conditions}
-      >
-        <TermsConditions />
-      </Modal>
-      <Modal
-        isOpen={isModalOpen.cookies}
-        onClose={() => setModalOpen((prev) => ({ ...prev, cookies: false }))}
-        hasCloseBtn={false}
-        allowKeyCloseEvent={false}
-      >
-        <Cookies
-          callbackFn={() =>
-            setModalOpen((prev) => ({ ...prev, cookies: false }))
-          }
-        />
-      </Modal>
-
-      <Modal
-        isOpen={isModalOpen.contact_us}
-        onClose={() => setModalOpen((prev) => ({ ...prev, contact_us: false }))}
-        className={styles.contactForm}
-      >
-        <ContactForm />
-      </Modal>
     </>
   );
 };

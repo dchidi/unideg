@@ -131,6 +131,31 @@ body {
   border-bottom: solid 1px #a5b2c8;
 }
 
+.smModal {
+  max-width: 500px;
+  width: 90%;
+  overflow: auto;
+  background: radial-gradient(circle, #c4dbff, #d3e7ff) !important;
+}
+.terms_conditions,
+.privacy_policy {
+  max-width: 800px;
+  width: 90%;
+  height: 90vh;
+  overflow: auto;
+}
+.contactForm {
+  max-width: 500px;
+  width: 90%;
+  overflow: auto;
+  background: radial-gradient(circle, #c4dbff, #d3e7ff) !important;
+}
+.videoModal {
+  max-width: 900px;
+  width: 100%;
+  padding-top: 3rem !important;
+}
+
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
   body {

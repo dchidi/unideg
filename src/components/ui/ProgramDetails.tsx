@@ -3,6 +3,7 @@ import styles from "./css/ProgramDetails.module.css";
 import classNames from "classnames";
 import { Column, Row } from "../layouts/row_column/RowColumn";
 import Button from "./Button";
+import { useAppState } from "../../store/AppContext";
 
 type ProgramDataProps = {
   id: string;
@@ -18,6 +19,7 @@ interface ProgramDetailsProps {
 }
 const ProgramDetails: React.FC<ProgramDetailsProps> = ({ className, data }) => {
   const css = classNames(styles.program, className);
+  const { dispatch } = useAppState();
 
   return (
     <div className={css}>
@@ -37,7 +39,7 @@ const ProgramDetails: React.FC<ProgramDetailsProps> = ({ className, data }) => {
           ))}
         </ul>
         <Button
-          onClick={() => {}}
+          onClick={() => dispatch({ type: "login", payload: true })}
           label="Apply Now"
           color="dark"
           className={styles.btn}

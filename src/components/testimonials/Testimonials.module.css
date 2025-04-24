@@ -82,6 +82,9 @@
   align-items: center;
   flex-direction: row;
 }
+.emptyStar {
+  color: #c3ccde;
+}
 
 /* ========== SMALL DEVICES (Phones, portrait mode, < 576px) ========== */
 @media only screen and (max-width: 575px) {
@@ -105,6 +108,9 @@
   }
   .userReview {
     height: 25vh;
+  }
+  .comment {
+    margin: auto 5%;
   }
 }
 
